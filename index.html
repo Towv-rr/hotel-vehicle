@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#ffffff">
-<title>车辆登记</title>
+<title>杭州大会展中心假日酒店</title>
 <style>
   :root{
     --bg:#f2f3f5; --card:#fff; --line:#e8e9eb;
@@ -26,8 +26,12 @@
     border-bottom:1px solid var(--line);
     display:flex;align-items:center;justify-content:space-between;gap:8px;
   }
-  header h1{font-size:17px;margin:0;font-weight:600}
-  .btn-ghost{border:none;background:#f0f2f5;color:var(--text);font-size:14px;padding:7px 14px;border-radius:8px;font-family:inherit}
+  /* Logo 的样式 */
+  .header-left{display:flex;align-items:center;gap:8px;overflow:hidden;}
+  .header-left img{height:26px;width:auto;border-radius:4px;object-fit:contain;flex:none;}
+  header h1{font-size:16px;margin:0;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  
+  .btn-ghost{border:none;background:#f0f2f5;color:var(--text);font-size:14px;padding:7px 12px;border-radius:8px;font-family:inherit;white-space:nowrap;flex:none;}
   .btn-ghost:active{opacity:.7}
 
   .card{background:var(--card);border-radius:14px;margin:12px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
@@ -120,7 +124,11 @@
 <body>
 
 <header>
-  <h1>车辆登记</h1>
+  <div class="header-left">
+    <!-- 这里引用了你的 Logo 图片，请确保图片名字是 logo.png -->
+    <img src="logo.png" alt="Logo" onerror="this.style.display='none'">
+    <h1>杭州大会展中心假日酒店</h1>
+  </div>
   <button class="btn-ghost" id="btnExport" type="button">导出 CSV</button>
 </header>
 
